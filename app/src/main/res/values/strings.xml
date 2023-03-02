@@ -20,4 +20,8 @@
     <string name="vertical">Vertical</string>
     <string name="horizontal">Horizontal</string>
     <string name="grid">Grid</string>
+    <string name="displayDogName">Bingoooo</string>
+    <string name="displayDogAge">18</string>
+    <string name="displayDogHobbies">Hobbies: sunbathing</string>
+    <string name="dogImageDescription">Picture of dog</string>
 </resources>

@@ -33,7 +33,6 @@ import com.example.dogglers.model.Dog
 class DogCardAdapter(
     private val context: Context?,
     private val layout: Int,
-//    private val dogData: DataSource
 ) : RecyclerView.Adapter<DogCardAdapter.DogCardViewHolder>() {
 
     // TODO: Initialize the data using the List found in data/DataSource
@@ -45,7 +44,6 @@ class DogCardAdapter(
      */
     class DogCardViewHolder(view: View?) : RecyclerView.ViewHolder(view!!) {
         // TODO: Declare and initialize all of the list item UI components
-        //GLI layout
         val dogImageIV: ImageView? = view?.findViewById(R.id.dogPictureImageView)
         val dogNameTV: TextView? = view?.findViewById(R.id.dogNameTextView)
         val dogAgeTV: TextView? = view?.findViewById(R.id.dogAgeTextView)
@@ -88,6 +86,7 @@ class DogCardAdapter(
         //  R.string.dog_hobbies string constant.
         //  Passing an argument to the string resource looks like:
         //  resources?.getString(R.string.dog_hobbies, dog.hobbies)
+        holder.dogHobbiesTV?.text = currentDog.hobbies
         resources?.getString(R.string.dog_hobbies, currentDog.hobbies)
 
     }

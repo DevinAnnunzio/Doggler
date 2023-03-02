@@ -39,6 +39,7 @@
 
         <ImageView
             android:id="@+id/dogPictureImageView"
+            android:contentDescription="@string/dogImageDescription"
             android:layout_width="wrap_content"
             android:layout_height="194dp"
             android:scaleType="centerCrop"
@@ -60,7 +61,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Bingoooo"
+            android:text="@string/displayDogName"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             app:layout_constraintBottom_toTopOf="@id/dogAgeTextViewVHL"
             app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +74,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="18"
+            android:text="@string/displayDogAge"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Hobbies: sunbathing"
+            android:text="@string/displayDogHobbies"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
