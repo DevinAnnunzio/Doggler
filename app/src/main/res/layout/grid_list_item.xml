@@ -38,7 +38,7 @@
                The width should match the with of the card
                The scaleType should be set to centerCrop-->
         <ImageView
-            android:id="@+id/dogPictureImageViewGL"
+            android:id="@+id/dogPictureImageView"
             android:layout_width="match_parent"
             android:layout_height="194dp"
             android:src="@drawable/leroy"
@@ -54,7 +54,7 @@
                 The dog's hobbies-->
 
         <TextView
-            android:id="@+id/dogNameTextViewGL"
+            android:id="@+id/dogNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -62,10 +62,10 @@
             android:text="Bingoooo"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dogPictureImageViewGL" />
+            app:layout_constraintTop_toBottomOf="@+id/dogPictureImageView" />
 
         <TextView
-            android:id="@+id/dogAgeTextViewGL"
+            android:id="@+id/dogAgeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -73,12 +73,12 @@
             android:layout_marginBottom="8dp"
             android:text="18"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            app:layout_constraintBottom_toTopOf="@+id/dogHobbiesTextViewVHL"
+            app:layout_constraintBottom_toTopOf="@+id/dogHobbiesTextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dogNameTextViewGL" />
+            app:layout_constraintTop_toBottomOf="@+id/dogNameTextView" />
 
         <TextView
-            android:id="@+id/dogHobbiesTextViewVHL"
+            android:id="@+id/dogHobbiesTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -88,7 +88,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dogAgeTextViewGL" />
+            app:layout_constraintTop_toBottomOf="@+id/dogAgeTextView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
