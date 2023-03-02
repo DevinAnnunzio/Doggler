@@ -33,11 +33,12 @@ import com.example.dogglers.model.Dog
 class DogCardAdapter(
     private val context: Context?,
     private val layout: Int,
-    private val dogData: DataSource
+//    private val dogData: DataSource
 ) : RecyclerView.Adapter<DogCardAdapter.DogCardViewHolder>() {
 
     // TODO: Initialize the data using the List found in data/DataSource
-    private val dogs: List<Dog> = dogData.dogs
+
+    private val dogs: List<Dog> = DataSource.dogs
 
     /**
      * Initialize view elements
@@ -45,10 +46,10 @@ class DogCardAdapter(
     class DogCardViewHolder(view: View?) : RecyclerView.ViewHolder(view!!) {
         // TODO: Declare and initialize all of the list item UI components
         //GLI layout
-        val dogImage: ImageView? = view?.findViewById(R.id.dogPictureImageView)
-        val dogName: TextView? = view?.findViewById(R.id.dogNameTextView)
-        val dogAge: TextView? = view?.findViewById(R.id.dogAgeTextView)
-        val dogHobbies: TextView? = view?.findViewById(R.id.dogHobbiesTextView)
+        val dogImageIV: ImageView? = view?.findViewById(R.id.dogPictureImageView)
+        val dogNameTV: TextView? = view?.findViewById(R.id.dogNameTextView)
+        val dogAgeTV: TextView? = view?.findViewById(R.id.dogAgeTextView)
+        val dogHobbiesTV: TextView? = view?.findViewById(R.id.dogHobbiesTextView)
 
     }
 
@@ -62,8 +63,8 @@ class DogCardAdapter(
         // TODO: Null should not be passed into the view holder. This should be updated to reflect
         //  the inflated layout.
         val layoutToBeInflated = when(layout){
-            1 -> LayoutInflater.from(parent.context).inflate(R.layout.vertical_horizontal_list_item, parent, true)
-            else -> LayoutInflater.from(parent.context).inflate(R.layout.grid_list_item, parent, true)
+            1 -> LayoutInflater.from(parent.context).inflate(R.layout.vertical_horizontal_list_item, parent, false)
+            else -> LayoutInflater.from(parent.context).inflate(R.layout.grid_list_item, parent, false)
         }
         return(DogCardViewHolder(layoutToBeInflated))
 
@@ -78,13 +79,16 @@ class DogCardAdapter(
         // TODO: Set the text for the current dog's name
         // TODO: Set the text for the current dog's age
         val currentDog = dogs[position]
+        holder.dogImageIV?.setImageResource(currentDog.imageResourceId)
+        holder.dogNameTV?.text = currentDog.name
+        holder.dogAgeTV?.text = currentDog.age
 
         val resources = context?.resources
         // TODO: Set the text for the current dog's hobbies by passing the hobbies to the
         //  R.string.dog_hobbies string constant.
         //  Passing an argument to the string resource looks like:
         //  resources?.getString(R.string.dog_hobbies, dog.hobbies)
-
+        resources?.getString(R.string.dog_hobbies, currentDog.hobbies)
 
     }
 }

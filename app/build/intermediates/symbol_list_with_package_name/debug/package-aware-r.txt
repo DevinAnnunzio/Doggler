@@ -2688,6 +2688,11 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id dogAgeTextView
+id dogAgeTextViewVHL
+id dogHobbiesTextView
+id dogNameTextView
+id dogPictureImageView
 id dragAnticlockwise
 id dragClockwise
 id dragDown
